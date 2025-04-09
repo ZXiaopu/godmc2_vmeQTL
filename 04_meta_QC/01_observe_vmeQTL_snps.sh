@@ -6,10 +6,7 @@ i=${1}
 
 mkdir -p ${processed_data_dir}
 mkdir -p ${processed_data_dir}/genetic_data
-for i in $(seq 1 22);
-do
 mkdir -p ${processed_data_dir}/LD_COJO_input/chr${i}
-done
 
 # observe vmeQTLs in each chromosome
 echo "Generating vmeQTL list of chr${i}"
