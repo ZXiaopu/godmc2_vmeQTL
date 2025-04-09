@@ -19,7 +19,7 @@ vmeQTL_QC_clone=""
 vmeQTL_QC_dir="${vmeQTL_QC_clone}/godmc2_vmeQTL/04_meta_QC"
 
 # set the cohort_name, please keep it consistent with the one you set in godmc phase1, this variable is case-sensitive
-cohrot_name=""
+cohort_name=""
 input_data_dir="${vmeQTL_QC_dir}/data"
 processed_data_dir="${vmeQTL_QC_dir}/processed_data"
 vmeQTL_script_dir="${vmeQTL_QC_dir}/scripts"
