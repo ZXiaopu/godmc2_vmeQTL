@@ -1,0 +1,374 @@
+Generating vmeQTL list of chr2
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab8.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.8
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab8
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab8.nosex
+.
+--extract: 5078 variants remaining.
+Warning: At least 7512 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+5078 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab8.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab8.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab8.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab9.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.9
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab9
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab9.nosex
+.
+--extract: 19386 variants remaining.
+Warning: At least 24314 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+19386 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab9.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab9.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab9.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.10
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10.nosex
+.
+--extract: 18476 variants remaining.
+Warning: At least 16177 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+18476 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab11.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.11
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab11
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab11.nosex
+.
+--extract: 20287 variants remaining.
+Warning: At least 16184 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+20287 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab11.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab11.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab11.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab12.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.12
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab12
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab12.nosex
+.
+--extract: 25878 variants remaining.
+Warning: At least 46408 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+25878 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab12.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab12.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab12.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab13.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.13
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab13
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab13.nosex
+.
+--extract: 16356 variants remaining.
+Warning: At least 19318 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+16356 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab13.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab13.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab13.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab14.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.14
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab14
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab14.nosex
+.
+--extract: 20992 variants remaining.
+Warning: At least 16730 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+20992 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab14.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab14.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab14.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab15.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.15
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab15
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab15.nosex
+.
+--extract: 19898 variants remaining.
+Warning: At least 20746 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+19898 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab15.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab15.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab15.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab16.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.16
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab16
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab16.nosex
+.
+--extract: 21206 variants remaining.
+Warning: At least 31510 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+21206 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab16.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab16.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab16.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab17.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/GoDMC_NSHD99/godmc_phase2/processed_data/genetic_data/tabfile/data.tab.17
+  --extract /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/snplist.chr2
+  --make-bed
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab17
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+51517 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab17.nosex
+.
+--extract: 4648 variants remaining.
+Warning: At least 13862 duplicate IDs in --extract file.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+4648 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab17.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab17.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab17.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+PLINK v1.90b3w 64-bit (3 Sep 2015)         https://www.cog-genomics.org/plink2
+(C) 2005-2015 Shaun Purcell, Christopher Chang   GNU General Public License v3
+Logging to /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged.log.
+Options in effect:
+  --bfile /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.tab10
+  --make-bed
+  --merge-list /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/combine_file_chr2.txt
+  --out /scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged
+
+1031753 MB RAM detected; reserving 515876 MB for main workspace.
+Warning: Variants '2:3246974_A_G' and '2:3246974_A_C' have the same position.
+Warning: Variants '2:6079044_A_T' and '2:6079044_A_G' have the same position.
+Warning: Variants '2:10071546_C_T' and '2:10071546_A_C' have the same position.
+42 more same-position warnings: see log file.
+Performing single-pass merge (1325 people, 172205 variants).
+Pass 1: fileset #1 complete.Pass 1: fileset #2 complete.Pass 1: fileset #3 complete.Pass 1: fileset #4 complete.Pass 1: fileset #5 complete.Pass 1: fileset #6 complete.Pass 1: fileset #7 complete.Pass 1: fileset #8 complete.Pass 1: fileset #9 complete.                                              Merged fileset written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged-merge.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged-merge.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged-merge.fam
+.
+172205 variants loaded from .bim file.
+1325 people (0 males, 0 females, 1325 ambiguous) loaded from .fam.
+Ambiguous sex IDs written to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged.nosex
+.
+Using 1 thread (no multithreaded calculations invoked.
+Before main variant filters, 1325 founders and 0 nonfounders present.
+Calculating allele frequencies... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99% done.
+172205 variants and 1325 people pass filters and QC.
+Note: No phenotypes present.
+--make-bed to
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged.bed
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged.bim
++
+/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC//godmc2_vmeQTL/04_meta_QC/processed_data/genetic_data/vmeQTL.chr2.merged.fam
+... 0%1%2%3%4%5%6%7%8%9%10%11%12%13%14%15%16%17%18%19%20%21%22%23%24%25%26%27%28%29%30%31%32%33%34%35%36%37%38%39%40%41%42%43%44%45%46%47%48%49%50%51%52%53%54%55%56%57%58%59%60%61%62%63%64%65%66%67%68%69%70%71%72%73%74%75%76%77%78%79%80%81%82%83%84%85%86%87%88%89%90%91%92%93%94%95%96%97%98%99%done.
+Merged vmeQTL genotypes from chromosome 2
+
+Attaching package: ‘dplyr’
+
+The following objects are masked from ‘package:stats’:
+
+    filter, lag
+
+The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, setequal, union
+
+Rows: 386799 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (2): SNP, CpG
+dbl (1): Chr
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24373734 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (6): Cohort, SNP, A1, A2, Probe, SNP_CpG_pair
+dbl (5): Freq, b, SE, p, N
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 25296696 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (6): Cohort, SNP, A1, A2, Probe, SNP_CpG_pair
+dbl (5): Freq, b, SE, p, N
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
+Rows: 24722489 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: "\t"
+chr (6): Cohort, SNP, A1, A2, Probe, SNP_CpG_pair
+dbl (5): Freq, b, SE, p, N
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
