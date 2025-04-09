@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+## parameters are the same as godmc2 phase1, please copy $home_directory and scripts_directory here
+home_directory=""
+scripts_directory=""
+section_07_dir="${home_directory}/results/07"
+tabfile="${home_directory}/processed_data/genetic_data/tabfile"
+covariates_combined="${home_directory}/processed_data/methylation_data/all_covariates"
+plink="${home_directory}/resources/bin/plink1.90"
+plink2="${home_directory}/resources/bin/plink2"
+gcta="${scripts_directory}/resources/bin/gcta-1.94.1"
+osca="${scripts_directory}/resources/bin/osca"
+R_directory="/users/k20125144/.conda/envs/R/bin/"
+untransformed_methylation_adjusted_pcs="${home_directory}/processed_data/methylation_data/untransformed_methylation_adjusted_pcs"
+
+# new parameters
+# the directory you git cloned the repository
+vmeQTL_QC_clone=""
+vmeQTL_QC_dir="${vmeQTL_QC_clone}/godmc2_vmeQTL/04_meta_QC"
+
+# set the cohort_name, please keep it consistent with the one you set in godmc phase1, this variable is case-sensitive
+cohrot_name=""
+input_data_dir="${vmeQTL_QC_dir}/data"
+processed_data_dir="${vmeQTL_QC_dir}/processed_data"
+vmeQTL_script_dir="${vmeQTL_QC_dir}/scripts"
+log_dir="${vmeQTL_QC_dir}/log"
+vmeQTL_01_logfile="${log_dir}/logfile_01"
+vmeQTL_02_logfile="${log_dir}/logfile_02"
+vmeQTL_03_logfile="${log_dir}/logfile_03"
+vmeQTL_04_logfile="${log_dir}/logfile_04"
+
+## this variable should change later
+cohort_vQTL_dir="${vmeTQL_QC_dir}/data"
+cojo_p="1e-5"
