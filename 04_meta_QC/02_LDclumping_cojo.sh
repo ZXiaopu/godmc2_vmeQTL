@@ -5,7 +5,8 @@ source config
 exec &> >(tee ${vmeQTL_02_logfile}_chr${1})
 i=${1}
 
-cut -f 2 ${input_data_dir}/vmeQTL_vCpG_pairs_1e-5_three_methods_chr${i}.txt | while read -r line; do
+cut -f 2 ${input_data_dir}/vmeQTL_vCpG_pairs_1e-5_three_methods_chr${i}.txt | sort | uniq > ${input_data_dir}/uniq_cpg_chr${i}
+cat ${input_data_dir}/uniq_cpg_chr${i} | while read -r line; do
 ${plink} --bfile ${processed_data_dir}/genetic_data/vmeQTL.chr${i}.merged \
       --clump ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_SVLM.LDinput \
       --clump-r2 0.2 \
