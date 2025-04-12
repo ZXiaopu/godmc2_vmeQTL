@@ -10,7 +10,7 @@ jma_files <- list.files(path = p, pattern = "jma.cojo$")
 
 d <- lapply(paste0(p,"/", jma_files), function(x) {
                         message("reading ", x) 
-                        read_delim(x, col_types=cols(refA=col_character())) %>% mutate(file=gsub(paste0(path,"/"),"",x))
+                        read_delim(x, col_types=cols(refA=col_character())) %>% mutate(file=gsub(paste0(p,"/"),"",x))
                         }) %>% bind_rows()
 d1 <- d %>%
         mutate(file1 = gsub(".cojo.jma.cojo","",file)) %>% 
