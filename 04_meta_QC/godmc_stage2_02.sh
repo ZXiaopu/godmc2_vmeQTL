@@ -4,6 +4,8 @@
 #SBATCH --partition interruptible_cpu,gpu,cpu
 #SBATCH --mem=64GB
 #SBATCH --ntasks=8
-#SBATCH --time=6:0:0
+#SBATCH --time=12:0:0
 
-bash 02_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID}
+sbatch 02_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} BF
+sbatch 02_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} SVLM
+sbatch 02_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} DRM
