@@ -6,4 +6,4 @@
 #SBATCH --ntasks=8
 #SBATCH --time=12:0:0
 
-bash 02_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID}
+bash 02b_combine_LD_cojo_res.sh ${SLURM_ARRAY_TASK_ID}
