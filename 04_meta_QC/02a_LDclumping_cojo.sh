@@ -2,7 +2,7 @@
 
 source config
 
-exec &> >(tee ${vmeQTL_02a_logfile}_chr${1}_${method})
+exec &> >(tee ${vmeQTL_02a_logfile}_chr${1}_${2})
 i=${1}
 method=${2}
 
