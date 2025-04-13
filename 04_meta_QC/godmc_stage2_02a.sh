@@ -6,6 +6,6 @@
 #SBATCH --ntasks=8
 #SBATCH --time=12:0:0
 
-sbatch 02a_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} BF
-sbatch 02a_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} SVLM
-sbatch 02a_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} DRM
+bash 02a_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} BF
+bash 02a_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} SVLM
+bash 02a_LDclumping_cojo.sh ${SLURM_ARRAY_TASK_ID} DRM
