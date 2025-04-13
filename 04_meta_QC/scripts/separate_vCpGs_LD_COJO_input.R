@@ -25,7 +25,7 @@ outdir = args[6]
 
 separate_cpgs <- function(res, chr, method){
     cpg_list <- unique(res$Probe)
-    write.table(cpg_list, file = paste0(outdir, "/chr", chr, "/cpglist_", method))
+    write.table(cpg_list, file = paste0(outdir, "/chr", chr, "/cpglist_", method), col=F, row=F, sep=" ", quote=F)
     for (cpg in cpg_list){
         tmp <- res %>% filter(Probe == cpg) %>%
                     mutate(SNP1 = SNP, P = p) %>% 
