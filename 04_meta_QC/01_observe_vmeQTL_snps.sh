@@ -42,7 +42,7 @@ then
 fi
 echo "Merged vmeQTL genotypes from chromosome ${i}"
 
-rm ${processed_data_dir}/genetic_data/vmeQTL.*tab*
+rm ${processed_data_dir}/genetic_data/vmeQTL.chr${i}.tab*
 
 # generate LD clumping input file for each vCpG
 ${R_directory}/Rscript \
