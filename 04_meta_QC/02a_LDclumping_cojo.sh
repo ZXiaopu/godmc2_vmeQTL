@@ -13,7 +13,7 @@ ${plink} --bfile ${processed_data_dir}/genetic_data/vmeQTL.chr${i}.merged \
       --clump-kb 2000 \
       --out ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.LDinput
 
-awk 'BEGIN{FS=" "}{print $3}' ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.clumped > ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.snplist
+awk 'BEGIN{FS=" "}{print $3}' ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.LDinput.clumped > ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.snplist
 
 ${gcta} --bfile ${processed_data_dir}/genetic_data/vmeQTL.chr${i}.merged \
         --cojo-file ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.cojo.ma \
