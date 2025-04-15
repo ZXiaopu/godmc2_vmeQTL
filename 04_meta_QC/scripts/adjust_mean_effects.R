@@ -70,7 +70,8 @@ run_vQTL <- function(snp, trait){
 
 out <- lapply(1:nrow(pair1), function(x) adjust_mean(pair1$SNP[x], pair1$cpg[x])) %>% bind_rows() 
 out1 <- out %>%
-    reshape2::melt(id.vars=c("vmeQTL", "vCpG")) %>% 
+    reshape2::melt(id.vars=c("vmeQTL", "vCpG")) 
+out1 <- out1 %>% 
     mutate(variable = gsub("_P","",out1$variable), P_adjMean=value) %>%
     mutate(info = paste(vmeQTL, vCpG, variable, sep="_")) %>% select(info, P_adjMean)
 pair <- pair %>% mutate(info = paste(SNP, cpg, method, sep="_"))
