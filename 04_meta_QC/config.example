@@ -31,5 +31,5 @@ vmeQTL_03_logfile="${log_dir}/logfile_03"
 vmeQTL_04_logfile="${log_dir}/logfile_04"
 
 ## this variable should change later
-cohort_vQTL_dir="${vmeQTL_QC_dir}/data"
-cojo_p="1e-5"
+cohort_vQTL_dir=""
+cojo_p="0.05"
