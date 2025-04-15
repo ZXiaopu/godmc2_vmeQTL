@@ -14,7 +14,7 @@ ${plink} --bfile ${processed_data_dir}/genetic_data/vmeQTL.chr${i}.merged \
       --out ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.LDinput
 
 if [ -f ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.LDinput.clumped ]; then
-    echo "skip"
+    awk 'BEGIN{FS=" "}{print $2}' ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.LDinput.clumped > ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.snplist
 else
     awk 'BEGIN{FS=" "}{print $2}' ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.LDinput > ${processed_data_dir}/LD_COJO_input/chr${i}/${line}_${method}.snplist
 fi
