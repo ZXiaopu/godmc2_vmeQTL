@@ -32,8 +32,19 @@ cov <- cov[,!index]
 
 ge <- function(snp, beta, env){
     mol <- lm(as.numeric(beta) ~ as.numeric(snp)*as.numeric(env))
-    sum <- data.frame(summary(mol)$coef)[-1,]
-    return(sum)
+    sum <- summary(mol)$coef
+    sum1 <- sum[rownames(sum)=="as.numeric(snp):as.numeric(env)",]
+    
+    if (length(sum1) == 0){
+        sum1_tmp <- data.frame(col1 = NA,col2 = NA,col3 = NA,col4 = NA)
+        colnames(sum1_tmp) <- colnames(sum)
+        sum1 <- sum1_tmp
+    } else {
+        sum1 <- sum[rownames(sum)=="as.numeric(snp):as.numeric(env)",] %>% t() %>% data.frame()
+        colnames(sum1) <- colnames(sum)
+    }
+
+    return(sum1)
 }
 
 runGE <- function(snp, cpg){
@@ -53,8 +64,7 @@ runGE <- function(snp, cpg){
     d1 <- merge(d, cov, by.x="IID") %>% na.omit()
 
     out <- lapply(c(4:ncol(d1)), function(x) {
-               ge(d1$genotype, d1$beta_value, d1[,x]) %>% 
-                mutate(statistics = c("G", colnames(d1)[x], paste0("Gx",colnames(d1)[x])))
+               ge(d1$genotype, d1$beta_value, d1[,x]) %>% mutate(statistics = paste0("Gx",colnames(d1)[x]))
                }) %>% bind_rows()
     return(out)
 }
