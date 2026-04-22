@@ -1,16 +1,24 @@
 #!/bin/bash
 #SBATCH --job-name=generate_meta_input
-#SBATCH --partition interruptible_cpu,gpu,cpu
-#SBATCH --mem=16GB
+#SBATCH --partition cpu,interruptible_cpu
+#SBATCH --mem=256GB
 #SBATCH --ntasks=8
-#SBATCH --time=8:0:0
-#SBATCH --output=../process_reports/generate_meta_input_%A_%a
+#SBATCH --time=12:0:0
 
-cohort=$1
-cpg_chunk=22
-g_chunk=${SLURM_ARRAY_TASK_ID}
-input_path="/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/Stage2/vQTL_results/Cohorts_with_all_results/$cohort/chr$cpg_chunk"
-home_path="/scratch/prj/bell/recovered/epigenetics/Analysis/subprojects/xiaopu/GoDMC/godmc2_vmeQTL/01_DataProcess"
+exec &> >(tee ../process_reports/generate_meta_chr${1}_${SLURM_ARRAY_TASK_ID}.out)
 
-/users/k20125144/.conda/envs/R/bin/Rscript 02.generate_meta_input.R ${input_path} ${cohort} ${g_chunk} ${cpg_chunk} ${home_path}
+source ../../config
+
+chr=$1
+info=`head -n ${SLURM_ARRAY_TASK_ID} ${vQTL_path}/chr${chr}_info_full | tail -n1`
+cohort=`echo $info | cut -d ',' -f 1`
+cpg_chr=`echo $info | cut -d ',' -f 2`
+g_chunk=`echo $info | cut -d ',' -f 3`
+sample_size=`echo $info | cut -d ',' -f 4`
+
+input_path="${vQTL_path}/$cohort/$cpg_chr"
+home_path=${meta_input_path}
+
+${Rscript} 02.generate_meta_input.R ${input_path} ${cohort} ${g_chunk} ${cpg_chr} ${home_path} ${sample_size}
+
 echo "Meta-analysis input for $cohort has been done"
