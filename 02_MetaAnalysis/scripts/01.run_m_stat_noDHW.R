@@ -1,85 +1,48 @@
-library(getmstatistic)  # for calculating M statistics
-library(gridExtra)       # for generating tables
-library(ggplot2)
+library(metafor)
 library(tidyr)
 library(dplyr)
 library(readr)
-library(data.table)
-input_path <- "../data"
+library(getmstatistic)
 
-BFfiles <- list.files(path = input_path, pattern = "^BF.*\\_all_pval5e-8_output")
-DRMfiles <- list.files(path = input_path, pattern = "^DRM.*\\_all_pval5e-8_output")
-SVLMfiles <- list.files(path = input_path, pattern = "^SVLM.*\\_all_pval5e-8_output")
+setwd("../data/Mstatistics/Mstat_P5.8e-14")
+load("BF_noRepeatSNP_10qtls_22cohorts/BF_noRepeatSNP_10qtls_22cohorts.RData")
+ds1_BF <- BF_ds2 %>% filter(file %in% c("Dutch_Hunger_Winter_Families_Study") == F)
+asso <- ds1_BF %>% group_by(SNP_Probe) %>% tally() %>% filter(n>=10)
+ds1_BF <- ds1_BF %>% filter(SNP_Probe %in% asso$SNP_Probe)
+ds1m_BF <- getmstatistic(ds1_BF$b, ds1_BF$SE, ds1_BF$SNP_Probe, ds1_BF$file)
+save(ds1_BF, ds1m_BF, file = "BF_noRepeatSNP_10qtls_22cohorts/BF_noRepeatSNP_10qtls_21cohorts_noDHW.RData")
 
-run_m <- function(files, method, pval, include_two_cohorts){
-    df <- lapply(files, function(x) read_delim(paste0(input_path,"/",x), col_names=c("SNP","Chr","BP","A1","A2","Freq","Probe","Probe_chr","Probe_bp","Gene","Orientation","b","SE","p")) %>% 
-            mutate(file = gsub(paste0(method,"_"), "", x)) %>% 
-            mutate(file = gsub("_all_pval5e-8_output","", file))) %>% 
-            bind_rows() %>% filter(file != "Dutch_Hunger_Winter_Families_Study")
-    
-    o <- df %>% filter(p<pval) 
-    o$SNP_Probe <- paste0(o$SNP, "_", o$Probe) 
+load("DRM_noRepeatSNP_10qtls_22cohorts/DRM_noRepeatSNP_10qtls_22cohorts.RData")
+ds1_DRM <- DRM_ds2 %>% filter(file %in% c("Dutch_Hunger_Winter_Families_Study") == F)
+asso <- ds1_DRM %>% group_by(SNP_Probe) %>% tally() %>% filter(n>=10)
+ds1_DRM <- ds1_DRM %>% filter(SNP_Probe %in% asso$SNP_Probe)
+ds1m_DRM <- getmstatistic(ds1_DRM$b, ds1_DRM$SE, ds1_DRM$SNP_Probe, ds1_DRM$file)
+save(ds1_DRM, ds1m_DRM, file = "DRM_noRepeatSNP_10qtls_22cohorts/DRM_noRepeatSNP_10qtls_21cohorts_noDHW.RData")
 
-    setDT(o)
-    n_probes <- uniqueN(o[file == "bib_eur_mother", Probe])
+load("SVLM_noRepeatSNP_10qtls_22cohorts/SVLM_noRepeatSNP_10qtls_22cohorts.RData")
+ds1_SVLM <- SVLM_ds2 %>% filter(file %in% c("Dutch_Hunger_Winter_Families_Study") == F)
+asso <- ds1_SVLM %>% group_by(SNP_Probe) %>% tally() %>% filter(n>=10)
+ds1_SVLM <- ds1_SVLM %>% filter(SNP_Probe %in% asso$SNP_Probe)
+ds1m_SVLM <- getmstatistic(ds1_SVLM$b, ds1_SVLM$SE, ds1_SVLM$SNP_Probe, ds1_SVLM$file)
+save(ds1_SVLM, ds1m_SVLM, file = "SVLM_noRepeatSNP_10qtls_22cohorts/SVLM_noRepeatSNP_10qtls_21cohorts_noDHW.RData")
 
-    # Pre-filter
-    ref <- o[file == "bib_eur_mother"]
+c <- read_delim("../covariates_mregression.csv") %>% select(-DNAm_Array)
 
-    # Count once
-    counts_all <- o[, .N, by = .(SNP, Probe, SNP_Probe)]
-    counts_ref <- ref[, .N, by = .(SNP, Probe, SNP_Probe)]
-
-    keep <- unique(c(counts_all[N >= 10, SNP_Probe],counts_ref[N >= 10, SNP_Probe]))
-    o3 <- o[J(keep), on = "SNP_Probe"]
-
-    setDT(o3)
-    asso <- o3[
-                o3[
-                    order(Probe, file != "bib_eur_mother"),
-                    .SD[1],
-                    by = Probe
-                    ],
-            on = "SNP_Probe"
-            ]
-
-    removeSNP <- asso %>% group_by(SNP) %>% tally() %>% filter(n>=30)
-    asso <- asso %>% filter((SNP %in% removeSNP$SNP)==F)
-
- #   if(include_two_cohorts == T){
- #       o %>% filter(file %in% c("bib_eur_mother")) %>% group_by(Probe) %>% tally() %>% nrow()
- #       ref <- o %>% filter(file %in% c("bib_eur_mother"))
- #       o1 <- o %>% filter(SNP_Probe %in% ref$SNP_Probe) %>% group_by(SNP, Probe, SNP_Probe) %>% tally() %>% filter(n>=10)
- #       o2 <- o %>% group_by(SNP, Probe, SNP_Probe) %>% tally() %>% filter(n>=10)
- #       o3 <- o %>% filter(SNP_Probe %in% c(o1$SNP_Probe, o2$SNP_Probe))
- #   } else{
- #       o <- o %>% filter((file %in% c("bib_eur_mother","GLAKU"))==F)
- #       o3 <- o %>% group_by(SNP, Probe, SNP_Probe) %>% tally() %>% filter(n>=10)
- #   }
-
- #   asso <- data.frame()
- #   for (c in unique(o3$Probe)){
- #       tmp <- o3 %>% filter(Probe == c)
- #       
- #       if ("bib_eur_mother" %in% tmp$file){
- #           tmp <- tmp %>% filter(file == "bib_eur_mother")
- #       }
- #
- #        asso0 <- o3 %>% filter(SNP_Probe %in% tmp$SNP_Probe[1])
- #        asso <- rbind(asso, asso0)
- #   }
-
-    ## bib_eur_mother cohort does not have as many association available as others
-    ## run m-statistics for two datasets
-    ## ds1: all 21 cohorts
-    ## ds2: excluding bib_eur_mother
-    
-    ds1 <- asso
-    ds1m <- getmstatistic(ds1$b, ds1$SE, ds1$SNP_Probe, ds1$file, save_dir=paste0(input_path,"/Mstat_P",pval, "/",method))
-#    ds2m <- getmstatistic(ds2$b, ds2$SE, ds2$SNP_Probe, ds2$file, save_dir=paste0(input_path,"/Mstat_P5.8e-14/", method, "_chr",chr,"_20cohorts"))
-    save(ds1m, ds1, file = paste0(input_path, "/Mstat_P", pval, "/", method, "_allchr_10qtls_noDHW_Mstat.RData"))
+M_regression_1 <- function(mstat){
+  tmp <- mstat %>% select(study_names_in, M, M_se) %>% unique()
+  ds_df1 <- merge(tmp, c, by.x="study_names_in")
+  vs <- colnames(c)[2:ncol(c)]
+  results <- lapply(vs, function(x) {
+    print(x)
+    mod <- rma(yi = M, vi = M_se^2, mod = as.formula(paste("~", x)), data = ds_df1)
+    data.frame(variable = x, pval = mod$pval[2])
+  })
+  out <- do.call(rbind, results)
+  return(out)
 }
 
-run_m(BFfiles, "BF", 5.8e-14, TRUE)
-run_m(DRMfiles, "DRM", 5.8e-14, TRUE)
-run_m(SVLMfiles, "SVLM", 5.8e-14, TRUE)
+o_redo1 <- rbind(M_regression_1(ds1m_BF$M_dataset) %>% mutate(method="BF"),
+           M_regression_1(ds1m_DRM$M_dataset) %>% mutate(method="DRM"),
+           M_regression_1(ds1m_SVLM$M_dataset) %>% mutate(method="SVLM"))
+write.table(o_redo1, "Mregression_21cohorts_noDHW.csv", col=T, row=F, sep=",", quote=F)
+

@@ -2,34 +2,42 @@ library(metafor)
 library(tidyr)
 library(dplyr)
 library(readr)
+library(getmstatistic)
 
-setwd("../data/Mstat_P5.8e-14")
+setwd("../data/Mstatistics/Mstat_P5.8e-14")
 
-load("BF_allchr_10qtls_noDHW_Mstat.RData")
-BF_ds1m_21c <- ds1m
-BF_ds1 <- ds1
-BF_rem <- BF_ds1 %>% group_by(SNP) %>% tally() %>% filter(n>=20)
-BF_ds2 <- BF_ds1 %>% filter((SNP %in% BF_rem$SNP) == F)
-ds2m_BF <- getmstatistic(BF_ds2$b, BF_ds2$SE, BF_ds2$SNP_Probe, BF_ds2$file, save_dir=paste0("BF_noRepeatSNP_10qtls_20cohorts"))
-save(ds2m_BF, BF_ds2, file = paste0("BF_noRepeatSNP_10qtls_20cohorts/BF_noRepeatSNP_10qtls_20cohorts.RData"))
+#load("BF_allchr_10qtls_Mstat.RData")
+#BF_ds1m_22c <- ds1m
+#BF_ds1 <- ds1
+#BF_rem <- BF_ds1 %>% group_by(SNP) %>% tally() %>% filter(n>=20)
+#BF_ds2 <- BF_ds1 %>% filter((SNP %in% BF_rem$SNP) == F)
+#ds2m_BF <- getmstatistic(BF_ds2$b, BF_ds2$SE, BF_ds2$SNP_Probe, BF_ds2$file, save_dir=paste0("BF_noRepeatSNP_10qtls_22cohorts"))
+#save(ds2m_BF, BF_ds2, file = paste0("BF_noRepeatSNP_10qtls_22cohorts/BF_noRepeatSNP_10qtls_22cohorts.RData"))
 
-load("DRM_allchr_10qtls_noDHW_Mstat.RData")
-DRM_ds1m_21c <- ds1m
-DRM_ds1 <- ds1
-DRM_rem <- DRM_ds1 %>% group_by(SNP) %>% tally() %>% filter(n>=20)
-DRM_ds2 <- DRM_ds1 %>% filter((SNP %in% DRM_rem$SNP) == F)
-ds2m_DRM <- getmstatistic(DRM_ds2$b, DRM_ds2$SE, DRM_ds2$SNP_Probe, DRM_ds2$file, save_dir=paste0("DRM_noRepeatSNP_10qtls_20cohorts"))
-save(ds2m_DRM, DRM_ds2, file = paste0("DRM_noRepeatSNP_10qtls_20cohorts/DRM_noRepeatSNP_10qtls_20cohorts.RData"))
+#load("DRM_allchr_10qtls_Mstat.RData")
+#DRM_ds1m_22c <- ds1m
+#DRM_ds1 <- ds1
+#DRM_rem <- DRM_ds1 %>% group_by(SNP) %>% tally() %>% filter(n>=20)
+#DRM_ds2 <- DRM_ds1 %>% filter((SNP %in% DRM_rem$SNP) == F)
+#ds2m_DRM <- getmstatistic(DRM_ds2$b, DRM_ds2$SE, DRM_ds2$SNP_Probe, DRM_ds2$file, save_dir=paste0("DRM_noRepeatSNP_10qtls_22cohorts"))
+#save(ds2m_DRM, DRM_ds2, file = paste0("DRM_noRepeatSNP_10qtls_22cohorts/DRM_noRepeatSNP_10qtls_22cohorts.RData"))
 
-load("SVLM_allchr_10qtls_noDHW_Mstat.RData")
-SVLM_ds1m_21c <- ds1m
-SVLM_ds1 <- ds1
-SVLM_rem <- SVLM_ds1 %>% group_by(SNP) %>% tally() %>% filter(n>=20)
-SVLM_ds2 <- SVLM_ds1 %>% filter((SNP %in% SVLM_rem$SNP) == F)
-ds2m_SVLM <- getmstatistic(SVLM_ds2$b, SVLM_ds2$SE, SVLM_ds2$SNP_Probe, SVLM_ds2$file, save_dir=paste0("SVLM_noRepeatSNP_10qtls_20cohorts"))
-save(ds2m_SVLM, SVLM_ds2, file = paste0("SVLM_noRepeatSNP_10qtls_20cohorts/SVLM_noRepeatSNP_10qtls_20cohorts.RData"))
+#load("SVLM_allchr_10qtls_Mstat.RData")
+#SVLM_ds1m_22c <- ds1m
+#SVLM_ds1 <- ds1
+#SVLM_rem <- SVLM_ds1 %>% group_by(SNP) %>% tally() %>% filter(n>=20)
+#SVLM_ds2 <- SVLM_ds1 %>% filter((SNP %in% SVLM_rem$SNP) == F)
+#ds2m_SVLM <- getmstatistic(SVLM_ds2$b, SVLM_ds2$SE, SVLM_ds2$SNP_Probe, SVLM_ds2$file, save_dir=paste0("SVLM_noRepeatSNP_10qtls_22cohorts"))
+#save(ds2m_SVLM, SVLM_ds2, file = paste0("SVLM_noRepeatSNP_10qtls_22cohorts/SVLM_noRepeatSNP_10qtls_22cohorts.RData"))
 
-c <- read_delim("../covariates_mregression.csv") %>% select(-DNAm_Array)
+load("BF_indepSNP_10qtls_22cohorts/BF_allchr_10qtls_indep_Mtat.RData")
+ds2m_BF <- ds1m
+load("DRM_indepSNP_10qtls_22cohorts/DRM_allchr_10qtls_indep_Mtat.RData")
+ds2m_DRM <- ds1m
+load("SVLM_indepSNP_10qtls_22cohorts/SVLM_allchr_10qtls_indep_Mtat.RData")
+ds2m_SVLM <- ds1m
+
+c <- read_delim("../covariates_mregression.csv")
 
 M_regression <- function(mstat){
   tmp <- mstat %>% select(study_names_in, M, M_se) %>% unique()
@@ -44,41 +52,36 @@ M_regression <- function(mstat){
   return(out)
 }
 
-o_21c <- rbind(M_regression(ds2m_BF$M_dataset) %>% mutate(method="BF"),
+o_22c <- rbind(M_regression(ds2m_BF$M_dataset) %>% mutate(method="BF"),
            M_regression(ds2m_DRM$M_dataset) %>% mutate(method="DRM"),
            M_regression(ds2m_SVLM$M_dataset) %>% mutate(method="SVLM"))
-write.table(o_21c, "Mregression_20cohorts_10qtls_noRepeatSNPs_pval5.8e-14.csv", col=T, row=F, sep=",", quote=F)
+write.table(o_22c, "Mregression_22cohorts_10qtls_indepSNPs_pval5.8e-14.csv", col=T, row=F, sep=",", quote=F)
 
-#o_20c <- rbind(M_regression(ds2m_BF$M_dataset %>% filter(study_names_in != "Dutch_Hunger_Winter_Families_Study")) %>% mutate(method="BF"),
-#           M_regression(ds2m_DRM$M_dataset %>% filter(study_names_in != "Dutch_Hunger_Winter_Families_Study")) %>% mutate(method="DRM"),
-#           M_regression(ds2m_SVLM$M_dataset %>% filter(study_names_in != "Dutch_Hunger_Winter_Families_Study")) %>% mutate(method="SVLM"))
-#write.table(o_20c, "Mregression_20cohorts_nobib_15qtls_pval5.8e-14.csv", col=T, row=F, sep=",", quote=F)
+DRM <- ds2m_DRM$M_dataset %>% select(study_names_in, M, M_se) %>% unique()
+DRM_df1 <- merge(DRM, c, by.x="study_names_in")
+rma(yi = M, vi = M_se^2, mod = M ~ DNAm_Array + Relatedness + Imputation_reference_panel, data = DRM_df1) # pval - DNAmArray: 0.02; imputational panel: 0.01
 
-#DRM <- DRM_ds1m_21c$M_dataset %>% select(study_names_in, M, M_se) %>% unique()
-#DRM_df1 <- merge(DRM, c, by.x="study_names_in")
-#rma(yi = M, vi = M_se^2, mod = M ~ DNAm_Array + Relatedness + is_Netherlands + Imputation_reference_panel, data = DRM_df1) # pval - DNAmArray: 0.03; imputational panel: 0.005
+SVLM <- ds2m_SVLM$M_dataset %>% select(study_names_in, M, M_se) %>% unique()
+SVLM_df1 <- merge(SVLM, c, by.x="study_names_in")
+rma(yi = M, vi = M_se^2, mod = M ~ DNAm_Array + Relatedness + is_Netherlands + Imputation_reference_panel, data = SVLM_df1) # imputational panel: 0.05
 
-#SVLM <- SVLM_ds1m_21c$M_dataset %>% select(study_names_in, M, M_se) %>% unique()
-#SVLM_df1 <- merge(SVLM, c, by.x="study_names_in")
-#rma(yi = M, vi = M_se^2, mod = M ~ DNAm_Array + Relatedness + is_Netherlands + Imputation_reference_panel, data = SVLM_df1) # pval - DNAmArray: 0.045; imputational panel: 0.0015
+M_regression_noDHW <- function(mstat){
+  tmp <- mstat %>% select(study_names_in, M, M_se) %>% unique()
+  ds_df1 <- merge(tmp, c, by.x="study_names_in") %>% select(-DNAm_Array)
+  vs <- colnames(ds_df1)[4:ncol(ds_df1)]
+  results <- lapply(vs, function(x) {
+    print(x)
+    mod <- rma(yi = M, vi = M_se^2, mod = as.formula(paste("~", x)), data = ds_df1)
+    data.frame(variable = x, pval = mod$pval[2])
+  })
+  out <- do.call(rbind, results)
+  return(out)
+}
 
-#M_regression_noDHW <- function(mstat){
-#  tmp <- mstat %>% select(study_names_in, M, M_se) %>% unique()
-#  ds_df1 <- merge(tmp, c, by.x="study_names_in") %>% select(-DNAm_Array)
-#  vs <- colnames(ds_df1)[4:28]
-#  results <- lapply(vs, function(x) {
-#    print(x)
-#    mod <- rma(yi = M, vi = M_se^2, mod = as.formula(paste("~", x)), data = ds_df1)
-#    data.frame(variable = x, pval = mod$pval[2])
-#  })
-#  out <- do.call(rbind, results)
-#  return(out)
-#}
-
-#o_20c_1 <- rbind(M_regression_noDHW(BF_ds1m_21c$M_dataset %>% filter((study_names_in %in% c("Dutch_Hunger_Winter_Families_Study")==F))) %>% mutate(method="BF"),
-#           M_regression_noDHW(DRM_ds1m_21c$M_dataset %>% filter((study_names_in %in% c("Dutch_Hunger_Winter_Families_Study")==F))) %>% mutate(method="DRM"),
-#           M_regression_noDHW(SVLM_ds1m_21c$M_dataset %>% filter((study_names_in %in% c("Dutch_Hunger_Winter_Families_Study")==F))) %>% mutate(method="SVLM"))
-#write.table(o_20c_1, "Mregression_20cohorts_noDHW_15qtls_pval5.8e-14.csv", col=T, row=F, sep=",", quote=F)
+o_21c <- rbind(M_regression_noDHW(ds2m_BF$M_dataset %>% filter((study_names_in %in% c("Dutch_Hunger_Winter_Families_Study")==F))) %>% mutate(method="BF"),
+           M_regression_noDHW(ds2m_DRM$M_dataset %>% filter((study_names_in %in% c("Dutch_Hunger_Winter_Families_Study")==F))) %>% mutate(method="DRM"),
+           M_regression_noDHW(ds2m_SVLM$M_dataset %>% filter((study_names_in %in% c("Dutch_Hunger_Winter_Families_Study")==F))) %>% mutate(method="SVLM"))
+write.table(o_21c, "Mregression_21cohorts_noDHW_10qtls_indepSNPs_pval5.8e-14.csv", col=T, row=F, sep=",", quote=F)
 
 ## rerun M stat
 library(getmstatistic)

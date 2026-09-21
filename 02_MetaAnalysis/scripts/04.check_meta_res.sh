@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --time=1:0:0
 
-exec &> >(tee ../process_reports/meta_res_check_chr${1}_index${2}.out)
+#exec &> >(tee ../process_reports/meta_res_check_chr${1}_index${2}.out)
 
 cd ../data/Meta_Results/chr$1
 
@@ -24,6 +24,6 @@ BFcpg=`cut -f 1 BF_random_meta_results_cpg_index${index}1.txt  | cut -f 4 -d '_'
 DRMcpg=`cut -f 1 DRM_random_meta_results_cpg_index${index}1.txt  | cut -f 4 -d '_' | sort | uniq | wc -l`
 SVLMcpg=`cut -f 1 SVLM_random_meta_results_cpg_index${index}1.txt  | cut -f 4 -d '_' | sort | uniq | wc -l`
 
-echo "meta-analysis in chr$chr index${index}: line - $BFline; cpg - $BFcpg"
-echo "meta-analysis in chr$chr index${index}: line - $DRMline; cpg - $DRMcpg"
-echo "meta-analysis in chr$chr index${index}: line - $SVLMline; cpg - $SVLMcpg"
+echo "meta-analysis in chr$chr index${index}: line - $BFline; cpg - $BFcpg" > ../../../process_reports/meta_res_check_chr${1}_index${2}.out
+echo "meta-analysis in chr$chr index${index}: line - $DRMline; cpg - $DRMcpg" >> ../../../process_reports/meta_res_check_chr${1}_index${2}.out
+echo "meta-analysis in chr$chr index${index}: line - $SVLMline; cpg - $SVLMcpg" >> ../../../process_reports/meta_res_check_chr${1}_index${2}.out

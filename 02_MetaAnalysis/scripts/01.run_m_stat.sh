@@ -7,4 +7,4 @@
 
 source ../../config
 
-${Rscrip} 01.run_m_stat.R
+${Rscript} 01.run_m_stat.R

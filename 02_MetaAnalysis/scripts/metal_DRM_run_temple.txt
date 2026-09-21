@@ -1,0 +1,21 @@
+# Meta-analysis weighted by standard error does not work well
+# because different studies used very different transformations
+SCHEME   STDERR
+
+# Not sure if genomic control is a good idea, given the large
+# number of true associations in these three regions ...
+# GENOMICCONTROL ON
+
+# To help identify allele flips, it can be useful to track
+# allele frequencies in the meta-analysis.
+AVERAGEFREQ ON
+MINMAXFREQ ON
+
+MARKER   SNP_Probe
+ALLELE   A1 A2
+EFFECT  b
+FREQ    Freq
+STDERR  SE
+PVAL     p
+
+

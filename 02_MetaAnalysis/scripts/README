@@ -1,0 +1,48 @@
+Descriptions of scripts
+
+I. M statistics analysis
+i. collect the list of summary statistics to run M statistics
+    00.get_mstat_list.sh
+    00.run_mstat_list.sh
+ii. run M statsitics
+    01.run_m_stat.R
+    01.run_m_stat.sh
+    01.run_m_stat_noDHW.R
+    01.run_m_stat_noDHW.sh
+iii. run M regression
+    02.m_regression.R
+
+II. Meta-analysis. Run random-effect meta-analysis but use fixed-effects meta-analysis Pvalue. Weight by se rather than N.
+i. template
+    metal_BF_run_temple.txt
+    metal_BF_run_temple.txt
+    metal_BF_run_temple.txt
+ii. generate meta-analysis scripts and run
+    03.generate_random_metal_script.sh
+    03.run_random_meta.sh
+iii. check results
+    04.check_meta_res.sh
+    04.summary_meta_result_info.R
+iv. select p<5e-8 meta0analysis results
+    05.filter_sig_asso.sh
+v. compare fixed-effect and random-effect meta-analysis result
+    06.random_vs_fix.R
+
+III. Generate lists for stage2 lists
+i. select associations run by BF only (no threshold applied) (list 2)
+    07a.filter_BF_only_asso.R
+    07a.filter_BF_only_asso.sh
+ii. select associations run by BF only + P<5e-8 in BF (list 1 part 1)
+    07b.filter_BF_sig_only_asso.R
+    07b.filter_BF_sig_only_asso.sh
+iii. select associations surpassing Bonferroni threshold in >=1 method(s) & P<5e-8 in 3 methods (list 1 part 2)
+    07c.filter_common_asso.R
+    07c.filter_common_asso.sh
+iv. generate lists
+    08.generate_list1-3.sh
+    
+IV. Generate referece SNPs/CpGs involved in meta-analysis for further analysis (>=3 cohorts; >=10k samples)
+    09.bg_snp_cpg_10ksample_3cohorts.R
+
+V. Generate list 5
+    10.observe_list5_cpgs.R 
